@@ -2,12 +2,14 @@ import { action, makeAutoObservable } from "mobx"
 import { isValidProp } from "./utils/isValidProp.ts"
 import { Account } from './models/Account.js'
 import { Identity } from '@bcwdev/auth0provider-client'
+import { Pet } from "./models/Pet.ts"
 
 
 class ObservableAppState {
 
   identity: Identity | null = null
   account: Account | null = null
+  pets: Pet[] = [];
 
   constructor() {
     makeAutoObservable(this)
