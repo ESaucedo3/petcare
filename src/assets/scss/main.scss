@@ -50,7 +50,8 @@ nav {
   img {
     width: 100%;
     object-fit: cover;
-    height: 30dvh;
+    height: 35vh;
+    height: 35dvh;
     border: 1px solid #333;
     box-shadow: 1px 1px 11px black;
     border-radius: 10px;
@@ -63,6 +64,10 @@ nav {
   overflow-y: scroll;
   overflow-x: hidden;
 
+  .pet-card {
+    border: 2px solid #333;
+  }
+
   img {
     aspect-ratio: 1/1;
     height: 15vh;
@@ -73,8 +78,8 @@ nav {
   .creator-picture {
     aspect-ratio: 1/1;
     border-radius: 50%;
-    height: 5vh;
-    height: 5dvh;
+    height: 10vh;
+    height: 10dvh;
     width: 50%;
   }
 }

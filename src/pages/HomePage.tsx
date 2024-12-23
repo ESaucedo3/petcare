@@ -49,13 +49,16 @@ export default function HomePage() {
               <div className="row gy-2">
                 {loading ? <h1 className="text-center">Loading Pet Selection...</h1> : pets.map(p => (
                 <div key={p.id} className="col-md-4">
-                  <h6 className="text-center">{p.name}</h6>
-                  <img src={p.imgUrl} alt="" />
-                  <p>{p.status}</p>
-                  <p>{p.age}</p>
-                  <p>{p.creator.name}</p>
-                  <img className="creator-picture" src={p.creator.picture} alt={p.creator.picture} />
-                  <p>{p.species}</p>
+                  <div className="pet-card p-1">
+                    <h6 className="text-center">{p.name}</h6>
+                    <img src={p.imgUrl} alt="" />
+                    <p className="text-capitalize text-center">Age: {p.age}</p>
+                    <p className="text-capitalize text-center">Status: {p.status}</p>
+                    <div className="d-flex align-items-center">
+                      <img className="creator-picture" src={p.creator.picture} alt={p.creator.picture} />
+                      <p className="m-0">{p.creator.name}</p>
+                  </div>
+                  </div>
                 </div>
               ))}
               </div>

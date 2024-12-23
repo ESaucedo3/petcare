@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Login from "./Login";
+import { ModalWrapper } from "./ModalWrapper";
 
 export function Navbar() {
   return (
@@ -27,10 +28,11 @@ export function Navbar() {
           <a href="#">Products</a>
           <a href="#">Trainers</a>
         </div>
-        <div className='d-flex gap-2'>
+        <div className='d-flex align-items-center gap-2'>
+          <button type="button" className="btn btn-outline-light rounded" data-bs-toggle="modal" data-bs-target="#addPetModal">Add Pet</button>
           <Login />
         </div>
       </div >
-    </nav >
+    </nav>
   )
 }
